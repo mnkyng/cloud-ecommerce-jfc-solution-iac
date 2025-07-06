@@ -1,3 +1,30 @@
+
+resource "aws_security_group" "rds_sg" {
+  name        = "rds-sg-${var.environment}"
+  description = "Security Group for RDS"
+  vpc_id      = var.vpc_id
+
+  ingress {
+    from_port   = 5432
+    to_port     = 5432
+    protocol    = "tcp"
+    cidr_blocks = ["10.0.0.0/16"] # ajusta según tu red
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name        = "rds-sg-${var.environment}"
+    Environment = var.environment
+    Project     = var.project_name
+  }
+}
+
 resource "aws_db_subnet_group" "this" {
   name       = "${var.project}-${var.environment}-rds-subnet-group"
   subnet_ids = var.private_subnet_ids

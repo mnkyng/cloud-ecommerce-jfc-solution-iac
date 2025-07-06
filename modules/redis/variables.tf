@@ -17,3 +17,14 @@ variable "security_group_ids" {
   description = "Lista de security groups permitidos"
   type        = list(string)
 }
+
+variable "environment" {}
+variable "project_name" {}
+
+variable "private_subnet_ids" {
+  type = list(string)
+}
+variable "instance_class" {
+  description = "Instance class for RDS cluster instances"
+  type        = string
+}

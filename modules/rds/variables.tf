@@ -36,7 +36,36 @@ variable "db_port" {
   default     = 5432
 }
 
+variable "project_name" {
+  description = "Nombre del proyecto"
+  type        = string
+}
+
 variable "environment" {
   description = "Nombre del entorno (dev, prod, etc.)"
   type        = string
 }
+
+variable "project" {}
+variable "private_subnet_ids" {
+  type = list(string)
+}
+
+variable "master_username" {
+  type = string
+}
+
+variable "master_password" {
+  type = string
+  sensitive = true
+}
+
+variable "security_group_id" {
+  type = string
+}
+
+variable "instance_class" {
+  description = "Clase de instancia para RDS"
+  type        = string
+}
+

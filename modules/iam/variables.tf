@@ -23,3 +23,21 @@ variable "policy_document" {
   description = "JSON con las políticas"
   type        = string
 }
+variable "project_name" {
+  description = "Nombre del proyecto"
+  type        = string
+  default     = "jfc"
+}
+
+variable "environment" {
+  description = "Entorno"
+  type        = string
+  default     = "dev"
+}
+
+variable "policies_path" {
+  description = "Ruta local de las políticas JSON"
+  type        = string
+  default     = "./policies"
+}
+variable "description" {}

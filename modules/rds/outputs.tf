@@ -12,3 +12,6 @@ output "db_cluster_id" {
   description = "ID del clúster de Aurora"
   value       = aws_rds_cluster.this.id
 }
+output "rds_endpoint" {
+  value = aws_rds_cluster.this.endpoint
+}

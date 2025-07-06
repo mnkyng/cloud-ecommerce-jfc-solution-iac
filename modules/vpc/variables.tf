@@ -22,3 +22,10 @@ variable "environment" {
   description = "Deployment environment name"
   type        = string
 }
+
+variable "cidr_block" {}
+variable "name" {}
+
+variable "azs" {
+  type = list(string)
+}
