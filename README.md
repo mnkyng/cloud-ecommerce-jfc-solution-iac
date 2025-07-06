@@ -55,7 +55,7 @@ cloud-ecommerce-jfc-solution-iac/
 1. **Clonar el repositorio**
 
 ```bash
-git clone https://github.com/<TU-USUARIO>/cloud-ecommerce-jfc-solution-iac.git
+git clone https://github.com/mnkyng/cloud-ecommerce-jfc-solution-iac.git
 cd cloud-ecommerce-jfc-solution-iac/environments/dev
 ```
 
